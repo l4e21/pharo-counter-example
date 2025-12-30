@@ -9,6 +9,28 @@ Class {
 }
 
 { #category : 'tests' }
+CounterTest >> testCountDecrementAndRead [
+	"comment stating purpose of instance-side method"
+	"scope: class-variables  &  instance-variables"
+
+	| c |
+	c := Counter new.
+	c count: 3; decrement; decrement.
+	self assert: c count equals: 1.
+]
+
+{ #category : 'tests' }
+CounterTest >> testCountIncrementAndRead [
+	"comment stating purpose of instance-side method"
+	"scope: class-variables  &  instance-variables"
+
+	| c |
+	c := Counter new.
+	c count: 0; increment; increment.
+	self assert: c count equals: 2.
+]
+
+{ #category : 'tests' }
 CounterTest >> testCountIsSetAndRead [
 	"comment stating purpose of instance-side method"
 	"scope: class-variables  &  instance-variables"

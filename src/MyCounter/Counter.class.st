@@ -31,3 +31,27 @@ Counter >> count: integer [
 
 	
 ]
+
+{ #category : 'API' }
+Counter >> decrement [
+	"comment stating purpose of instance-side method"
+	"scope: class-variables  &  instance-variables"
+
+	count := count - 1.
+]
+
+{ #category : 'API' }
+Counter >> increment [
+	"comment stating purpose of instance-side method"
+	"scope: class-variables  &  instance-variables"
+	
+	count := count + 1.
+]
+
+{ #category : 'initialization' }
+Counter >> initialize [
+	"comment stating purpose of instance-side method"
+	"scope: class-variables  &  instance-variables"
+
+	count := 0.
+]
