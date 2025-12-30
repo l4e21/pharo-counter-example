@@ -40,3 +40,13 @@ CounterTest >> testCountIsSetAndRead [
 	c count: 7.
 	self assert: c count equals: 7.
 ]
+
+{ #category : 'tests' }
+CounterTest >> testStartingAt [
+	"comment stating purpose of instance-side method"
+	"scope: class-variables  &  instance-variables"
+
+	| c |
+	c := Counter startingAt: 3.
+	self assert: c count equals: 3.
+]
